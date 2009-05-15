@@ -25,8 +25,10 @@
 	<p class="content">I'm chosing to license it as <a href="http://www.gnu.org/copyleft/gpl.html">GPL3</a>, so feel free to use it, and change it around and do whatever you'd like, as long as you license your theme similarly.</p>
 
 	<p class="title">Download</p>
-	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.tar.gz">helvetica_simplicty-1.0.tar.gz</a></p>
+	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">helvetica_simplicty-1.0.2.tar.gz</a></p>
 	
 	<p class="title">Changelog</p>
+	<p class="content">2009-05-15 // v1.0.2 // Cleaning up some total oversights.</p>
 	<p class="content">2009-05-15 // v1.0 // This is the initial release of this theme.</p>
+
 </div>
