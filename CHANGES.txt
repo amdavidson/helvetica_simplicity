@@ -1,0 +1,6 @@
+Helvetica Simplicity
+http://amdavidson.me/p/theme
+
+Changelog
+
+2009-05-15 // v1.0 // This is the initial release of this theme.
