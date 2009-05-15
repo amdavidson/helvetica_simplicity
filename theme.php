@@ -28,7 +28,7 @@
 	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">helvetica_simplicty-1.0.2.tar.gz</a></p>
 	
 	<p class="title">Changelog</p>
-	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">v1.0.2</a> // Cleaning up some total oversights.</p>
+	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">v1.0.2</a> // Cleaning up some total oversights and support for youtube favorites.</p>
 	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.tar.gz">v1.0</a> // This is the initial release of this theme.</p>
 
 </div>
