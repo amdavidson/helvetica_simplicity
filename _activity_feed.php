@@ -47,9 +47,25 @@
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
 	            	<a href="<?php echo $item->get_original_permalink()?>">
 		            	<p class="source">posted on vimeo</p>
-		            	<p><?php echo $item->get_video()?></p>
-		            	<p><?php echo word_limiter(strip_tags($item->get_content()), 15)?></p>
+		            	<div class="video"><?php echo $item->get_video()?></div>
+		            	<p class="content">
+		            		<?php echo word_limiter(strip_tags($item->get_content()), 15)?>
+		            	</p>
 	            	</a>
+
+
+            <?php elseif ($item->get_feed_domain() == 'youtube.com'): ?>
+	          <!-- this item came from youtube -->
+	            <div class="item">
+	            	<p class="date"><?php echo $item->get_human_date()?></p>
+		            <p class="source">favorited on youtube</p>
+		            <p class="title"><a href="<?php echo $item->get_original_permalink()?>">
+			            	<?php echo $item->get_title()?></a></p>
+	            	<div class="video"><?php echo $item->get_video()?></div>
+	            	<p class="content">
+	            		<?php echo word_limiter(strip_tags($item->get_content()), 15)?>
+	            	</p>
+
 
 
             <?php elseif ($item->get_feed_domain() == 'flickr.com'): ?>

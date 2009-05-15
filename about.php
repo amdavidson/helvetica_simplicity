@@ -29,6 +29,7 @@
 		<li>&#187; <a href="http://flickr.com/photos/amdavidson">Flickr</a>, where I post my photos.</li>
 		<li>&#187; <a href="http://twitter.com/amdavidson">Twitter</a>, my twitter microblogging feed.</li>
 		<li>&#187; <a href="http://vimeo.com/amdavidson">Vimeo</a>, a place where I have and will ocassionally post videos.</li>
+		<li>&#187; <a href="http://gdata.youtube.com/feeds/api/users/superczar/favorites?v=2">YouTube</a>, videos that I've favorited.</li>
 	</ul>
 	<p class="content">Please forgive duplicated content on the Lifestream, there will often be times where I highlight a photo from Flickr on AMDavidson.com, or times where I Twitter about a link I've also bookmarked on Delicious. That's just part of the fragmentation of the social web, part of what this site hopes to fix, at least for me.</p>
 	

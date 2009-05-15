@@ -62,17 +62,23 @@ body {
 	
 /* Classed Blocks */
 
-div .item {
+div.item {
 	width: 500px;
 	margin: 20px auto 50px auto;
 	padding: 5px;
 	overflow: hidden;
 }
 
-div .photo {
+div.photo {
 	width: 300px;
 	height: 300px;
 	margin: 0 auto;
+}
+
+div.video {
+	width: 450px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 /* 	Typography 
