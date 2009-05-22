@@ -34,6 +34,15 @@
 
             <?php elseif ($item->get_feed_domain() == 'twitter.com'): ?>
             <!-- this item came from twitter -->
+
+	            <?php 
+	            	// Stupid hack to avoid publishing of favorited tweets...
+	            	// Should be done in twitter plugin, but this is a 
+	            	// backup.
+	            	if (preg_match("/amdavidson/", $item->item_name) == 0 ):
+	            	 continue;
+	            	endif ?>
+
 	            <div class="item">
             		<p class="date"><?php echo $item->get_human_date()?></p>
                 <p class="quote"><a href="<?php echo $item->get_original_permalink()?>"><span class="quote">&#8220;</span></a><?php echo preg_replace('/\#([a-zA-Z0-9_]{1,15})?/', "<a class=\"hash\" href=\"http://hashtags.org/tag/$1\">#$1</a>", preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', "<a class=\"name\" href=\"http://twitter.com/$1\">@$1</a>", $item->get_title())); ?></p>
@@ -45,13 +54,12 @@
 	          <!-- this item came from Vimeo -->
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
-	            	<a href="<?php echo $item->get_original_permalink()?>">
-		            	<p class="source">posted on vimeo</p>
-		            	<div class="video"><?php echo $item->get_video()?></div>
-		            	<p class="content">
-		            		<?php echo word_limiter(strip_tags($item->get_content()), 15)?>
-		            	</p>
-	            	</a>
+	            	<p class="source">posted on vimeo</p>
+	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
+	            	<div class="video"><?php echo $item->get_video()?></div>
+	            	<p class="content">
+	            		<?php echo word_limiter(strip_tags($item->get_content()), 15)?>
+	            	</p>
 
 
             <?php elseif ($item->get_feed_domain() == 'youtube.com'): ?>
@@ -105,7 +113,7 @@
 		        		<p class="source">posted at amdavidson.com</p>
 	            	<p  class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 40)?></p>
+	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
 
 
             <?php elseif ($item->get_feed_domain() == 'andr3w.net'): ?>
@@ -115,7 +123,7 @@
 		        		<p class="source">posted at andr3w.net</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 40)?></p>
+	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
 
 
             <?php elseif ($item->get_feed_domain() == 'andromi.info'): ?>
@@ -125,7 +133,7 @@
 		        		<p class="source">posted at andromi.info</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 40)?></p>
+	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
 
 
             <?php else: ?>
@@ -135,7 +143,7 @@
 		        		<p class="source">posted at amdavidson.me</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 40)?></p>
+	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
 
             
             <?php endif; ?>
