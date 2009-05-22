@@ -94,12 +94,13 @@ p.source {
 	font-size: 1em;
 	line-height: 1.2em;
 	padding-bottom: 5px;
-	letter-spacing: .05em;
+	letter-spacing: -.02em;
 }
 
 p.title {
 	text-transform: lowercase;
 	font-size: 1.4em;
+	letter-spacing: -.02em;
 }
 
 p.content {
