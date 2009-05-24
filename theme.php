@@ -25,9 +25,10 @@
 	<p class="content">I'm chosing to license it as <a href="http://www.gnu.org/copyleft/gpl.html">GPL3</a>, so feel free to use it, and change it around and do whatever you'd like, as long as you license your theme similarly.</p>
 
 	<p class="title">Download</p>
-	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">helvetica_simplicty-1.0.2.tar.gz</a></p>
+	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.tar.gz">helvetica_simplicty-1.1.tar.gz</a></p>
 	
 	<p class="title">Changelog</p>
+	<p class="content">2009-05-24 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.tar.gz">v1.1</a> // Updated for more words in my blog summaries and delicious links. Better support for Vimeo videos. Typographic changes. Hackish code added to prevent favorited tweets from being displayed.</p>
 	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">v1.0.2</a> // Cleaning up some total oversights and support for youtube favorites.</p>
 	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.tar.gz">v1.0</a> // This is the initial release of this theme.</p>
 
