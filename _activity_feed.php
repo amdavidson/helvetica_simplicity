@@ -93,7 +93,7 @@
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
 	            	<p class="source">link saved at delicious</p>
 								<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 40)?></p>
+	            	<p class="content"><?php echo strip_tags($item->get_content())?></p>
 
             
 
@@ -113,7 +113,7 @@
 		        		<p class="source">posted at amdavidson.com</p>
 	            	<p  class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
+	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
 
 
             <?php elseif ($item->get_feed_domain() == 'andr3w.net'): ?>
@@ -123,7 +123,7 @@
 		        		<p class="source">posted at andr3w.net</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
+	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
 
 
             <?php elseif ($item->get_feed_domain() == 'andromi.info'): ?>
@@ -133,7 +133,7 @@
 		        		<p class="source">posted at andromi.info</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
+	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
 
 
             <?php else: ?>
