@@ -1,4 +1,8 @@
 <?php //    
+//		File: rss_feed.php
+//		Theme: Helvetica Simplicty
+//		Software: Sweetcron
+//
 //    Copyright (C) 2009 Andrew Davidson
 //
 //    This program is free software: you can redistribute it and/or modify
