@@ -40,7 +40,7 @@
             		<?php 
             			$twitter_username = split(':', $item->item_data['title']);
             			$twitter_username = $twitter_username[0];
-            			if ( $twitter_username != "amdavidson"):
+            			if ( $twitter_username != "amdavidson" ):
             				echo " <p class=\"source\">Tweet favorited on Twitter.com</p> ";
             			endif;
             		?>
@@ -155,3 +155,4 @@
         <?php endforeach; endif; ?>
 
 </div>
+<div id="pagination"> <p class="pagination"><?php echo $pages?></p> </div>
