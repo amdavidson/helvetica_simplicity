@@ -23,6 +23,7 @@
 	<p class="content">I'm no expert in design, nor am I even very well versed in it. This is my attempt at a very simple, typography based design. The sole font used on the page is Helvetica and it's my first time ever trying to pay careful attention to the typography of my designs, rather than just the font face.</p>
 	<p class="content">I'm sure things will change here as I fumble my way through creating a cohesive design. As things do change though, I'll be updating this page, with new versions.</p>
 	<p class="content">I'm chosing to license it as <a href="http://www.gnu.org/copyleft/gpl.html">GPL3</a>, so feel free to use it, and change it around and do whatever you'd like, as long as you license your theme similarly.</p>
+	<p class="content">If you do end up using this theme, please email me, it'd be great to hear that someone else got something out of it. <a href="mailto:theme@amdavidson.me">theme@amdavidson.me</a></p>
 
 	<p class="title">Download</p>
 	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.tar.gz">helvetica_simplicty-1.1.tar.gz</a></p>
