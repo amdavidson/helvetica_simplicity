@@ -91,6 +91,7 @@ p {
 }
 
 p.source {
+	text-transform: lowercase;
 	font-size: 1em;
 	line-height: 1.2em;
 	padding-bottom: 5px;
@@ -125,10 +126,12 @@ p.quote {
 	font-size: 1.4em;
 }
 
-p.name {
+p.attribution {
+	text-transform: lowercase;
 	text-align: right;
 	padding-top: 10px;
-	font-size: 1em;
+	margin-right: 15px;
+	font-size: 1.2em;
 }
 
 p.caption {

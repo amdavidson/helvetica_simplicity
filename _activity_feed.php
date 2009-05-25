@@ -26,7 +26,7 @@
             <!-- this item is a sweetcron post -->
               <div class="item">
               	<p class="date"><?php echo $item->get_human_date()?></p>
-		        		<p class="source">posted at amdavidson.me</p>
+		        		<p class="source">Posted at amdavidson.me</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
 	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 40)?></p>
@@ -35,18 +35,21 @@
             <?php elseif ($item->get_feed_domain() == 'twitter.com'): ?>
             <!-- this item came from twitter -->
 
-	            <?php 
-	            	// Stupid hack to avoid publishing of favorited tweets...
-	            	// Should be done in twitter plugin, but this is a 
-	            	// backup.
-	            	if (preg_match("/amdavidson/", $item->item_name) == 0 ):
-	            	 continue;
-	            	endif ?>
-
 	            <div class="item">
             		<p class="date"><?php echo $item->get_human_date()?></p>
-                <p class="quote"><a href="<?php echo $item->get_original_permalink()?>"><span class="quote">&#8220;</span></a><?php echo preg_replace('/\#([a-zA-Z0-9_]{1,15})?/', "<a class=\"hash\" href=\"http://hashtags.org/tag/$1\">#$1</a>", preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', "<a class=\"name\" href=\"http://twitter.com/$1\">@$1</a>", $item->get_title())); ?></p>
+            		<?php 
+            			$twitter_username = split(':', $item->item_data['title']);
+            			$twitter_username = $twitter_username[0];
+            			if ( $twitter_username != "amdavidson"):
+            				echo " <p class=\"source\">Tweet favorited on Twitter.com</p> ";
+            			endif;
+            		?>
             		
+                <p class="quote"><a href="<?php echo $item->get_original_permalink()?>"><span class="quote">&#8220;</span></a><?php echo preg_replace('/\#([a-zA-Z0-9_]{1,15})?/', "<a class=\"hash\" href=\"http://hashtags.org/tag/$1\">#$1</a>", preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', "<a class=\"name\" href=\"http://twitter.com/$1\">@$1</a>", $item->get_title())); ?></p>
+                
+								<?php if ($twitter_username != "amdavidson"): ?>
+ 	               <p class="attribution">Twittered by <a href="http://twitter.com/<?php echo $twitter_username ?>">@<?php echo $twitter_username ?></a></p>
+            		<?php endif; ?>
 
 
             			
@@ -54,7 +57,7 @@
 	          <!-- this item came from Vimeo -->
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
-	            	<p class="source">posted on vimeo</p>
+	            	<p class="source">Video Posted on Vimeo</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
 	            	<div class="video"><?php echo $item->get_video()?></div>
 	            	<p class="content">
@@ -66,7 +69,7 @@
 	          <!-- this item came from youtube -->
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
-		            <p class="source">favorited on youtube</p>
+		            <p class="source">Video Favorited on YouTube</p>
 		            <p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 			            	<?php echo $item->get_title()?></a></p>
 	            	<div class="video"><?php echo $item->get_video()?></div>
@@ -80,7 +83,7 @@
             <!-- this item came from flickr -->
             	<div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
-	            	<p class="source">photo posted to flickr</p>
+	            	<p class="source">Photo Posted to Flickr</p>
 		            <div class="photo" style="background: url(<?php echo $item->item_data['flickr_com']['image']['m'] ?>) center center no-repeat;"></div>
 		            <p class="caption"><a href="<?php echo $item->get_original_permalink()?>">
 		                <?php echo $item->get_title()?></a></p>
@@ -91,7 +94,7 @@
             <!-- this item came from delicious.com -->
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
-	            	<p class="source">link saved at delicious</p>
+	            	<p class="source">Link Saved at Delicious</p>
 								<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
 	            	<p class="content"><?php echo strip_tags($item->get_content())?></p>
 
@@ -101,7 +104,7 @@
 	          <!-- this item came from last.fm -->
 	            <div class="item">            
 	        		<p class="date"><?php echo $item->get_human_date()?></p>
-	        		<p class="source">listening to</p>
+	        		<p class="source">Listening to</p>
             	<p><a href="<?php echo $item->get_original_permalink()?>">
                 <?php echo $item->get_title()?></a></p>
 
@@ -110,7 +113,7 @@
 						<!-- this item came from amdavidson.com -->
 	            <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
-		        		<p class="source">posted at amdavidson.com</p>
+		        		<p class="source">Posted at AMDavidson.com</p>
 	            	<p  class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
 	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
@@ -120,7 +123,7 @@
 						<!-- this item came from andr3w.net -->
 		          <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
-		        		<p class="source">posted at andr3w.net</p>
+		        		<p class="source">Posted at andr3w.net</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
 	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
@@ -130,7 +133,7 @@
 						<!-- this item came from andromi.info -->
 	            <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
-		        		<p class="source">posted at andromi.info</p>
+		        		<p class="source">Posted at Andromi.info</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
 	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
@@ -140,7 +143,6 @@
 		        <!-- generic box for when the theme doesn't know what to do -->
 	            <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
-		        		<p class="source">posted at amdavidson.me</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 	            		<?php echo $item->get_title()?></a></p>
 	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 100)?></p>
