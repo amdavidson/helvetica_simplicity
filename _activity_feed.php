@@ -45,7 +45,7 @@
             			endif;
             		?>
             		
-                <p class="quote"><a href="<?php echo $item->get_original_permalink()?>"><span class="quote">&#8220;</span></a><?php echo preg_replace('/\#([a-zA-Z0-9_]{1,15})?/', "<a class=\"hash\" href=\"http://hashtags.org/tag/$1\">#$1</a>", preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', "<a class=\"name\" href=\"http://twitter.com/$1\">@$1</a>", $item->get_title())); ?></p>
+                <p class="quote"><a href="<?php echo $item->get_original_permalink()?>"><span class="quote">&#8220;</span></a><?php echo preg_replace('/\#([a-zA-Z0-9_]{1,25})?/', "<a class=\"hash\" href=\"http://hashtags.org/tag/$1\">#$1</a>", preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', "<a class=\"name\" href=\"http://twitter.com/$1\">@$1</a>", $item->get_title())); ?></p>
                 
 								<?php if ($twitter_username != "amdavidson"): ?>
  	               <p class="attribution">Twittered by <a href="http://twitter.com/<?php echo $twitter_username ?>">@<?php echo $twitter_username ?></a></p>
@@ -140,7 +140,8 @@
 
 
             <?php else: ?>
-		        <!-- generic box for when the theme doesn't know what to do -->
+		        <!-- this item came from an unknown source -->
+		        <!-- This theme is only rudimentally prepared to handle this. -->
 	            <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
