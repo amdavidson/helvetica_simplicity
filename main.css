@@ -140,8 +140,9 @@ p.attribution {
 
 p.caption {
 	text-align: center;	
-	margin-top: 10px;
+	margin: 10px auto 10px auto;
 	text-transform: lowercase;
+	width: 450px;
 }
 
 #static p {
@@ -193,6 +194,10 @@ a.header {
 
 p.quote a {
 	letter-spacing: -.05em;
+}
+
+p.quote a:hover {
+	text-decoration: none;
 }
 
 p.quote a.name {
