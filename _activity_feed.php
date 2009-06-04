@@ -95,10 +95,9 @@
             	<div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
  	           		<p class="source">I posted a photo to Flickr</p>
- 	           		<p class="title"><?php echo $item->get_title()?></p>
 		            <div class="photo" style="background: url(<?php echo $item->item_data['flickr_com']['image']['m'] ?>) center center no-repeat;"></div>
-		            <p class="caption"><a href="<?php echo $item->get_original_permalink()?>">
-		                <?php echo $item->get_title()?></a></p>
+ 	           		<p class="photo_title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
+		            <div class="caption"><?php echo $item->get_content()?></div>
 	            
 
 

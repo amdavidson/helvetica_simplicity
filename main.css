@@ -85,6 +85,13 @@ div.video {
 	text-align: center;
 }
 
+div.caption {
+	text-align: center;
+	margin: 10px auto 10px auto;
+	width: 450px;
+}
+
+
 /* 	Typography 
 *****************/
 
@@ -138,11 +145,15 @@ p.attribution {
 	font-size: 1.2em;
 }
 
-p.caption {
-	text-align: center;	
-	margin: 10px auto 10px auto;
+p.photo_title {
+	text-align: center;
 	text-transform: lowercase;
-	width: 450px;
+	font-size: 1.4em;
+	letter-spacing: -.02em;
+}
+
+div.caption p {
+	text-transform: lowercase;
 }
 
 #static p {
