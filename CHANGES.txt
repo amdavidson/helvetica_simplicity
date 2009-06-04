@@ -3,6 +3,7 @@ http://amdavidson.me/p/theme
 
 Changelog
 
+2009-06-03 // v1.1.1 // Changes to verbiage in source text. Basic support for favorite tweets. Increased number of allowed characters in a Twitter hashtag. Cleaned up pagination blocks, and duplicated on bottom of page. Margin changes. Basic support for videos I "like" on Vimeo.
 2009-05-24 // v1.1 // Updated for more words in my blog summaries and delicious links. Better support for Vimeo videos. Typographic changes. Hackish code added to prevent favorited tweets from being displayed.
 2009-05-15 // v1.0.2 // Cleaning up some total oversights and support for youtube favorites.
 2009-05-15 // v1.0 // This is the initial release of this theme.

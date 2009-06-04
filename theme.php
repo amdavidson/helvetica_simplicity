@@ -29,9 +29,10 @@
 	<p class="content">If you do end up using this theme, please email me, it'd be great to hear that someone else got something out of it. <a href="mailto:theme@amdavidson.me">theme@amdavidson.me</a></p>
 
 	<p class="title">Download</p>
-	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.tar.gz">helvetica_simplicty-1.1.tar.gz</a></p>
+	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.1.tar.gz">helvetica_simplicty-1.1.1.tar.gz</a></p>
 	
 	<p class="title">Changelog</p>
+	<p class="content">2009-06-03 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.1.tar.gz">v1.1.1</a> // Changes to verbiage in source text. Basic support for favorite tweets. Increased number of allowed characters in a Twitter hashtag. Cleaned up pagination blocks, and duplicated on bottom of page. Margin changes. Basic support for videos I "like" on Vimeo.</p>
 	<p class="content">2009-05-24 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.tar.gz">v1.1</a> // Updated for more words in my blog summaries and delicious links. Better support for Vimeo videos. Typographic changes. Hackish code added to prevent favorited tweets from being displayed.</p>
 	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">v1.0.2</a> // Cleaning up some total oversights and support for youtube favorites.</p>
 	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.tar.gz">v1.0</a> // This is the initial release of this theme.</p>
