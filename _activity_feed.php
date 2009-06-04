@@ -63,11 +63,16 @@
 	          <!-- this item came from Vimeo -->
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
+	            	
+	            	<?php if (preg_match('/likes\/rss/', $item->get_feed_url())) : ?> 	
+	            	<p class="source">I liked this video on Vimeo</p>
+								<?php else : ?>
 	            	<p class="source">I posted a video on Vimeo</p>
-	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
+	            	<?php endif ?>
+	            	
 	            	<div class="video"><?php echo $item->get_video()?></div>
-	            	<p class="content">
-	            		<?php echo word_limiter(strip_tags($item->get_content()), 15)?>
+	            	<p class="caption">
+	            		<?php echo word_limiter(strip_tags($item->get_content()), 25)?>
 	            	</p>
 
 
@@ -79,8 +84,8 @@
 		            <p class="title"><a href="<?php echo $item->get_original_permalink()?>">
 			            	<?php echo $item->get_title()?></a></p>
 	            	<div class="video"><?php echo $item->get_video()?></div>
-	            	<p class="content">
-	            		<?php echo word_limiter(strip_tags($item->get_content()), 15)?>
+	            	<p class="caption">
+	            		<?php echo word_limiter(strip_tags($item->item_data['description']), 15)?>
 	            	</p>
 
 
@@ -90,6 +95,7 @@
             	<div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
  	           		<p class="source">I posted a photo to Flickr</p>
+ 	           		<p class="title"><?php echo $item->get_title()?></p>
 		            <div class="photo" style="background: url(<?php echo $item->item_data['flickr_com']['image']['m'] ?>) center center no-repeat;"></div>
 		            <p class="caption"><a href="<?php echo $item->get_original_permalink()?>">
 		                <?php echo $item->get_title()?></a></p>
