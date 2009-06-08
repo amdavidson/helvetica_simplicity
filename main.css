@@ -46,13 +46,6 @@ body {
 	text-align: center;
 }
 
-#pagination {
-	width: 500px;
-	margin: 0 auto;
-	text-align: center;
-	padding-bottom: 15px;	
-}
-
 #activity {
 	width: 500px;
 	margin: 0px auto 25px auto;
@@ -65,6 +58,13 @@ body {
 }
 	
 /* Classed Blocks */
+
+div.pagination {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 15px;	
+}
 
 div.item {
 	width: 500px;

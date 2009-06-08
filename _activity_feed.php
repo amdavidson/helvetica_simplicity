@@ -20,7 +20,7 @@
 //
 ?>
 
-<div id="pagination"> <p class="pagination"><?php echo $pages?></p> </div>
+<div class="pagination"> <p class="pagination"><?php echo $pages?></p> </div>
 <div id="activity">
 
         <?php if ($items): $i = 1; foreach ($items as $item): ?>
@@ -166,4 +166,4 @@
         <?php endforeach; endif; ?>
 
 </div>
-<div id="pagination"> <p class="pagination"><?php echo $pages?></p> </div>
+<div class="pagination"> <p class="pagination"><?php echo $pages?></p> </div>
