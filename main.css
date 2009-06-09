@@ -91,6 +91,16 @@ div.caption {
 	width: 450px;
 }
 
+div.albumart {
+	height:80px;
+	width:80px;
+	float:left;
+}
+
+div.songtext {
+	float:left;
+}
+
 
 /* 	Typography 
 *****************/
@@ -230,6 +240,9 @@ div.pagination a:hover {
 	background-color: #fff;
 }
 
+div.song_text a {
+	font-size: 1.4em;
+}
 
 h1 a {
 	font-size: 10em;

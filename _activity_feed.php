@@ -115,9 +115,11 @@
 	          <!-- this item came from last.fm -->
 	            <div class="item">            
 	        		<p class="date"><?php echo $item->get_human_date()?></p>
-	        		<p class="source">I am listening to</p>
-            	<p><a href="<?php echo $item->get_original_permalink()?>">
-                <?php echo $item->get_title()?></a></p>
+	        		<p class="source">I loved this track on last.fm</p>
+							<div class="albumart"><a href="<?php echo $item->item_data['album_url']?>"><img src="<?php echo $item->item_data['image_url_small'] ?>" /></a></div>
+            	<div class="song_text">
+								<a href="<?php echo $item->item_data['artist_url'] ?>"><?php echo $item->item_data['artist']?></a> - <a href="<?php echo $item->item_data['track_url']?>"><?php echo $item->item_data['track_title']?></a>
+							</div>
 
 
             <?php elseif ($item->get_feed_domain() == 'amdavidson.com'): ?>
