@@ -69,11 +69,8 @@
 								<?php else : ?>
 	            	<p class="source">I posted a video on Vimeo</p>
 	            	<?php endif ?>
-	            	
+	
 	            	<div class="video"><?php echo $item->get_video()?></div>
-	            	<p class="caption">
-	            		<?php echo word_limiter(strip_tags($item->get_content()), 25)?>
-	            	</p>
 
 
             <?php elseif ($item->get_feed_domain() == 'youtube.com'): ?>
@@ -81,13 +78,7 @@
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
 		            <p class="source">I favorited a video on YouTube</p>
-		            <p class="title"><a href="<?php echo $item->get_original_permalink()?>">
-			            	<?php echo $item->get_title()?></a></p>
 	            	<div class="video"><?php echo $item->get_video()?></div>
-	            	<p class="caption">
-	            		<?php echo word_limiter(strip_tags($item->item_data['description']), 15)?>
-	            	</p>
-
 
 
             <?php elseif ($item->get_feed_domain() == 'flickr.com'): ?>
