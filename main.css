@@ -27,8 +27,8 @@
 /* Named Blocks */
 
 body {
-	color: #fff;
-	background-color: #3c3c3c;
+	color: #000;
+	background-color: #fff;
 	font-family: Helvetica, Verdana, sans-serif;
 	font-size: .8em;
 }
@@ -92,9 +92,10 @@ div.caption {
 }
 
 div.albumart {
-	height:80px;
-	width:80px;
+	height:100px;
+	width:100px;
 	float:left;
+	text-align:center;
 }
 
 div.songtext {
@@ -123,13 +124,14 @@ p.title {
 	text-transform: lowercase;
 	font-size: 1.4em;
 	letter-spacing: -.02em;
+	margin-bottom:10px;
 }
 
 p.content {
 	text-transform: lowercase;
 	line-height: 1.2em;
 	font-size: 1em;
-	padding: 3px;
+	margin-left:50px;
 }
 
 p.date {
@@ -189,8 +191,9 @@ span.quote {
 	font-size: 300%;
 	font-weight: bold;
 	float: left;
-	width: .6em;
+	width: 50px;
 	height: .5em;
+	text-indent:11px;
 }
 
 span.quote:hover {
