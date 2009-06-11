@@ -85,7 +85,11 @@
             <!-- this item came from flickr -->
             	<div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
- 	           		<p class="source">I posted a photo to Flickr</p>
+								<?php if (preg_match('/amdavidson/', $item->get_original_permalink())) : ?>
+ 	           			<p class="source">I posted a photo to Flickr</p>
+								<? else : ?>
+									<p class="source">I favorited this photo on Flickr</p>
+								<? endif; ?>
 		            <div class="photo" style="background: url(<?php echo $item->item_data['flickr_com']['image']['m'] ?>) center center no-repeat;"></div>
  	           		<p class="photo_title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
 		            <div class="caption"><?php echo $item->get_content()?></div>
@@ -107,7 +111,7 @@
 	            <div class="item">            
 	        		<p class="date"><?php echo $item->get_human_date()?></p>
 	        		<p class="source">I loved this track on last.fm</p>
-							<div class="albumart"><a href="<?php echo $item->item_data['album_url']?>"><img src="<?php echo $item->item_data['image_url_small'] ?>" /></a></div>
+							<div class="albumart"><a href="<?php echo $item->item_data['album_url']?>"><img style="width:64px;height:64px;" src="<?php echo $item->item_data['image_url_small'] ?>" /></a></div>
             	<div class="song_text">
 								<a href="<?php echo $item->item_data['artist_url'] ?>"><?php echo $item->item_data['artist']?></a> - <a href="<?php echo $item->item_data['track_url']?>"><?php echo $item->item_data['track_title']?></a>
 							</div>
