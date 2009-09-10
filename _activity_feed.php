@@ -27,8 +27,9 @@
 
 
             <?php if ($item->get_feed_domain() == $this->config->item('base_url')): ?>
-            <!-- this item is a sweetcron post -->
-              <div class="item">
+            	<!-- this item is a sweetcron post -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/dev_60.png" /></a></div>
+				<div class="item">
               	<p class="date"><?php echo $item->get_human_date()?></p>
 		        		<p class="source">I posted this at amdavidson.me</p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
@@ -37,8 +38,8 @@
 
 
             <?php elseif ($item->get_feed_domain() == 'twitter.com'): ?>
-            <!-- this item came from twitter -->
-
+            	<!-- this item came from twitter -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/chat_60.png" /></a></div>
 	            <div class="item">
             		<p class="date"><?php echo $item->get_human_date()?></p>
             		<?php 
@@ -51,7 +52,7 @@
             			endif;
             		?>
             		
-                <p class="quote"><a href="<?php echo $item->get_original_permalink()?>"><span class="quote">&#8220;</span></a><?php echo preg_replace('/\#([a-zA-Z0-9_]{1,25})?/', "<a class=\"hash\" href=\"http://hashtags.org/tag/$1\">#$1</a>", preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', "<a class=\"name\" href=\"http://twitter.com/$1\">@$1</a>", $item->get_title())); ?></p>
+                <p class="quote"><a href="<?php echo $item->get_original_permalink()?>"></a><?php echo preg_replace('/\#([a-zA-Z0-9_]{1,25})?/', "<a class=\"hash\" href=\"http://hashtags.org/tag/$1\">#$1</a>", preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', "<a class=\"name\" href=\"http://twitter.com/$1\">@$1</a>", $item->get_title())); ?></p>
                 
 								<?php if ($twitter_username != "amdavidson"): ?>
  	               <p class="attribution">By <a href="http://twitter.com/<?php echo $twitter_username ?>">@<?php echo $twitter_username ?></a></p>
@@ -60,7 +61,8 @@
 
             			
             <?php elseif ($item->get_feed_domain() == 'vimeo.com'): ?>
-	          <!-- this item came from Vimeo -->
+	          	<!-- this item came from Vimeo -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/video_60.png" /></a></div>
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
 	            	
@@ -74,7 +76,8 @@
 
 
             <?php elseif ($item->get_feed_domain() == 'youtube.com'): ?>
-	          <!-- this item came from youtube -->
+	          	<!-- this item came from youtube -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/video_60.png" /></a></div>
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
 		            <p class="source">I favorited a video on YouTube</p>
@@ -82,39 +85,52 @@
 
 
             <?php elseif ($item->get_feed_domain() == 'flickr.com'): ?>
-            <!-- this item came from flickr -->
+            	<!-- this item came from flickr -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/photo_60.png" /></a></div>
             	<div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
  	           		<p class="source">I posted a photo to Flickr</p>
-		            <div class="photo" style="background: url(<?php echo $item->item_data['flickr_com']['image']['m'] ?>) center center no-repeat;"></div>
- 	           		<p class="photo_title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
-		            <div class="caption"><?php echo $item->get_content()?></div>
+ 	           		<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
+					<img src="<?php echo $item->item_data['flickr_com']['image']['m']?>">
+		            <div class="content"><?php echo $item->get_content()?></div>
 	            
 
 
             <?php elseif ($item->get_feed_domain() == 'delicious.com'): ?>
-            <!-- this item came from delicious.com -->
+            	<!-- this item came from delicious.com -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/link_60.png" /></a></div>
 	            <div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
 	            	<p class="source">I saved a link to Delicious</p>
 								<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo strip_tags($item->get_content())?></p>
+
+
+	            <?php elseif ($item->get_feed_domain() == 'pinboard.in'): ?>
+	            	<!-- this item came from pinboard -->
+	              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/link_60.png" /></a></div>
+		            <div class="item">
+		            	<p class="date"><?php echo $item->get_human_date()?></p>
+		            	<p class="source">I saved a link to Pinboard</p>
+									<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
+
 
             
 
             <?php elseif ($item->get_feed_domain() == 'last.fm'): ?>
-	          <!-- this item came from last.fm -->
+  	            <!-- this item came from last.fm -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/music_60.png" /></a></div>
 	            <div class="item">            
 	        		<p class="date"><?php echo $item->get_human_date()?></p>
 	        		<p class="source">I loved this track on last.fm</p>
-							<div class="albumart"><a href="<?php echo $item->item_data['album_url']?>"><img src="<?php echo $item->item_data['image_url_small'] ?>" /></a></div>
+				<div class="albumart"><a href="<?php echo $item->item_data['album_url']?>"><img height="64" width="64" src="<?php echo $item->item_data['image_url_small'] ?>" /></a></div>
             	<div class="song_text">
-								<a href="<?php echo $item->item_data['artist_url'] ?>"><?php echo $item->item_data['artist']?></a> - <a href="<?php echo $item->item_data['track_url']?>"><?php echo $item->item_data['track_title']?></a>
-							</div>
+						<a href="<?php echo $item->item_data['artist_url'] ?>"><?php echo $item->item_data['artist']?></a> - <a href="<?php echo $item->item_data['track_url']?>"><?php echo $item->item_data['track_title']?></a>
+				</div>
 
 
             <?php elseif ($item->get_feed_domain() == 'amdavidson.com'): ?>
-						<!-- this item came from amdavidson.com -->
+				<!-- this item came from amdavidson.com -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/post_60.png" /></a></div>
 	            <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
 		        		<p class="source">I posted this at AMDavidson.com</p>
@@ -124,17 +140,19 @@
 
 
             <?php elseif ($item->get_feed_domain() == 'andr3w.net'): ?>
-						<!-- this item came from andr3w.net -->
-		          <div class="item">
-		        		<p class="date"><?php echo $item->get_human_date()?></p>
-		        		<p class="source">I posted this at andr3w.net</p>
-	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">
-	            		<?php echo $item->get_title()?></a></p>
-	            	<p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
+				<!-- this item came from andr3w.net -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/post_60.png" /></a></div>
+		        <div class="item">
+		        	<p class="date"><?php echo $item->get_human_date()?></p>
+		        	<p class="source">I posted this at andr3w.net</p>
+	              <p class="title"><a href="<?php echo $item->get_original_permalink()?>">
+	            	<?php echo $item->get_title()?></a></p>
+	              <p class="content"><?php echo word_limiter(strip_tags($item->get_content()), 150)?></p>
 
 
             <?php elseif ($item->get_feed_domain() == 'andromi.info'): ?>
-						<!-- this item came from andromi.info -->
+				<!-- this item came from andromi.info -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/post_60.png" /></a></div>
 	            <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
 		        		<p class="source">I posted this at Andromi.info</p>
@@ -146,6 +164,7 @@
             <?php else: ?>
 		        <!-- this item came from an unknown source -->
 		        <!-- This theme is only rudimentally prepared to handle this. -->
+              	<div class="type"><a href="<?php echo $item->get_original_permalink()?>"><img src="<?php echo $this->config->item('theme_folder')?>/icons/blank_60.png" /></a></div>
 	            <div class="item">
 		        		<p class="date"><?php echo $item->get_human_date()?></p>
 	            	<p class="title"><a href="<?php echo $item->get_original_permalink()?>">

@@ -34,25 +34,28 @@ body {
 }
 
 #header {
-	width: 500px;
+	width: 600px;
 	margin: 0 auto;
 	text-align: center;
 	margin-bottom: 50px;
 }
 
 #footer {
-	width: 500px;
+	width: 600px;
 	margin: 25px auto 10px auto;
 	text-align: center;
 }
 
 #activity {
-	width: 500px;
-	margin: 0px auto 25px auto;
+	width: 600px;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #static {
-	width: 500px;
+	width: 600px;
 	margin: 0 auto;
 	margin-bottom: 50px;
 }
@@ -60,10 +63,17 @@ body {
 /* Classed Blocks */
 
 div.pagination {
-	width: 500px;
+	width: 600px;
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 15px;	
+}
+
+div.type {
+	width: 70px;
+	margin: 0px;
+	float: left;
+	text-align: right;
 }
 
 div.item {
@@ -81,12 +91,9 @@ div.photo {
 
 div.video {
 	width: 450px;
-	margin: 0 auto;
-	text-align: center;
 }
 
 div.caption {
-	text-align: center;
 	margin: 10px auto 5px auto;
 	width: 450px;
 }
@@ -95,7 +102,6 @@ div.albumart {
 	height:100px;
 	width:100px;
 	float:left;
-	text-align:center;
 }
 
 div.songtext {
@@ -131,7 +137,6 @@ p.content {
 	text-transform: lowercase;
 	line-height: 1.2em;
 	font-size: 1em;
-	margin-left:50px;
 }
 
 p.date {
