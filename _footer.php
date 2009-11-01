@@ -27,7 +27,9 @@
 	</p>
 	<p>copyright 2009 andrew davidson</p>
 	<p><a href="http://validator.w3.org/check?uri=referer">xhtml</a> // 
-		<a href="http://jigsaw.w3.org/css-validator/check/referer">css</a></p>		
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">css</a></p><br/>		
+	<p style="font-size:80%;">Updated <?php echo timespan($this->config->item('last_fetch'))?> ago</p><br/>
+
 	<p><a  href="http://www.rackspacecloud.com" style="text-decoration:none;  font-family:Arial, Helvetica, sans-serif; font-size:12px; text-align: center; display: block;"><img alt="Cloud Hosting - Formerly Mosso" src="http://cdn.cloudfiles.mosso.com/c110782/the-rackspace-cloud-125-wide.png" border="0"/></a></p>
 
 </div>
