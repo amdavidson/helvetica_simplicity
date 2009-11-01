@@ -22,15 +22,16 @@
 
 <div id="static">
 	<p class="title">simply helvetica</p>
-	<p class="content">After being thouroughly disappointed by the themes available for the very neat <a href="http://sweetcron.com">SweetCron</a> software, I decided to code my own. </p>
+	<p class="content">After being thoroughly disappointed by the themes available for the very neat <a href="http://sweetcron.com">SweetCron</a> software, I decided to code my own. </p>
 	<p class="content">I'm no expert in design, nor am I even very well versed in it. I'm sure things will change here as I fumble my way through creating a cohesive design. As things do change though, I'll be updating this page with new versions.</p>
-	<p class="content">I'm chosing to license it as <a href="http://www.gnu.org/copyleft/gpl.html">GPL3</a>, so feel free to use it, and change it around and do whatever you'd like, as long as you license your theme similarly.</p>
+	<p class="content">I'm choosing to license it as <a href="http://www.gnu.org/copyleft/gpl.html">GPL3</a>, so feel free to use it, and change it around and do whatever you'd like, as long as you license your theme similarly.</p>
 	<p class="content">If you do end up using this theme, please email me, it'd be great to hear that someone else got something out of it. <a href="mailto:theme@amdavidson.me">theme@amdavidson.me</a></p>
 
 	<p class="title">Download</p>
-	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.1.tar.gz">helvetica_simplicty-1.1.1.tar.gz</a></p>
+	<p class="content"><a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.2.tar.gz">helvetica_simplicty-1.2.tar.gz</a></p>
 	
 	<p class="title">Changelog</p>
+	<p class="content">2009-09-11 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.2.tar.gz">v1.2</a> // Added support for pinboard.in (known issues with date and time offset). Updated formatting with stronger left alignment and object type icons. Icons are based on the great "Agua Stacks" icon set from <a href="http://iconfactory.com">iconfactory.com</a>, they are not redistributed because I do not think their licensing allows for that.</p>
 	<p class="content">2009-06-03 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.1.tar.gz">v1.1.1</a> // Changes to verbiage in source text. Basic support for favorite tweets. Increased number of allowed characters in a Twitter hashtag. Cleaned up pagination blocks, and duplicated on bottom of page. Margin changes. Basic support for videos I "like" on Vimeo.</p>
 	<p class="content">2009-05-24 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.1.tar.gz">v1.1</a> // Updated for more words in my blog summaries and delicious links. Better support for Vimeo videos. Typographic changes. Hackish code added to prevent favorited tweets from being displayed.</p>
 	<p class="content">2009-05-15 // <a href="http://cdn.cloudfiles.mosso.com/c72422/helvetica_simplicity-1.0.2.tar.gz">v1.0.2</a> // Cleaning up some total oversights and support for youtube favorites.</p>
