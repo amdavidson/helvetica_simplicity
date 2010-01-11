@@ -90,9 +90,9 @@
             	<div class="item">
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
  	           		<p class="source">I posted a photo to Flickr</p>
- 	           		<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
-					<img src="<?php echo $item->item_data['flickr_com']['image']['m']?>">
-		            <div class="content"><?php echo $item->get_content()?></div>
+								<img src="<?php echo $item->item_data['flickr_com']['image']['m']?>">
+								<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
+								<div class="content"><?php echo $item->get_content()?></div>
 
 	            
 
@@ -104,6 +104,7 @@
 	            	<p class="date"><?php echo $item->get_human_date()?></p>
 	            	<p class="source">I saved a link to Delicious</p>
 								<p class="title"><a href="<?php echo $item->get_original_permalink()?>"><?php echo $item->get_title()?></a></p>
+								<p class="content"><?php echo $item->get_content()?></p>
 
 
 	            <?php elseif ($item->get_feed_domain() == 'pinboard.in'): ?>
